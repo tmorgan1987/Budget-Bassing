@@ -12,7 +12,7 @@ const Header = () => {
                     <Link href='/'>
                         <span className='cursor-pointer'>
                             {/* <img src='BB-logos_white_1_80x80.png'></img> */}
-                            <img src='test-logo.png'></img>
+                            <img src='test-logo.png'/>
                         </span>
                     </Link>
                 </div>
