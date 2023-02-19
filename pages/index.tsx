@@ -9,7 +9,7 @@ export default function Home({ posts }) {
         <title>Budget Bassing</title>
         <link rel="icon" href="/BB-logos" />
       </Head>
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
+      <div className='grid grid-cols-1 lg:grid-cols-12'>
       <div className='lg:col-span-5 col-span-1'>
         {posts.map((post) => <PostCard post={post.node} key={post.title}/>)}
       </div>
