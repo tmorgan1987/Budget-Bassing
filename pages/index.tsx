@@ -4,7 +4,7 @@ import { getPosts } from '../services';
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto">
       <Head>
         <title>Budget Bassing</title>
         <link rel="icon" href="/BB-logos" />
@@ -12,6 +12,9 @@ export default function Home({ posts }) {
       <div className='grid grid-cols-1 lg:grid-cols-12'>
       <div className='lg:col-span-5 col-span-1'>
         {posts.map((post) => <PostCard post={post.node} key={post.title}/>)}
+      </div>
+      <div className='lg:col-span-4 col-span-4'>
+      {/* Empty Div for Spacing */}
       </div>
       <div className="lg: col-span-3 col-span-1">
         <div className="lg:sticky relative top-8">
