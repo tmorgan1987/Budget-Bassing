@@ -44,6 +44,7 @@ export const getRecentPosts = async () => {
     posts(
       orderBy: createdAt_ASC
       last: 3
+      where: {NOT: {featuredPost_not: false}}
     ) {
       title
       featuredImage {

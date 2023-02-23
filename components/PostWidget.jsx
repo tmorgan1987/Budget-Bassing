@@ -16,6 +16,8 @@ const PostWidget = ({categories, slug}) => {
         .then((result) => setRelatedPosts(result))
     }
   }, [slug])
+
+  
   return (
     <div className="text-right justify-around shadow-none pb-80 mb-8">
         
@@ -46,5 +48,7 @@ const PostWidget = ({categories, slug}) => {
     </div>
   )
 }
+
+
 
 export default PostWidget
