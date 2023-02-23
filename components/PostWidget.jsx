@@ -16,33 +16,30 @@ const PostWidget = ({categories, slug}) => {
         .then((result) => setRelatedPosts(result))
     }
   }, [slug])
-  
   return (
-    <div className="text-right relative overflow-hidden justify-around shadow-none pb-80 mb-8">
+    <div className="text-right justify-around shadow-none pb-80 mb-8">
         
         <h3 className='text-gray-400 text-xl mb-8 font-semibold border-b pb-4'>
           {slug ? 'Related' : 'Recent'}
         </h3> 
-        {/* This is the H3 element that displays related/recent reviews */}
 
         {relatedPosts.map((post)=> (
+          <div className='relative'>
           <div key={post.title} className=''>
             <div className=''>
               <img
               alt={post.title}
-              height='120px'
-              width='120px'
-              className=''
+              height='500px'
+              width='300px'
+              className='pb-10'
               src={post.featuredImage.url}
               />
             </div>
-            <div className='text-white'>
-            <Link href={`/post/${post.slug}`} key={post.title} className='text-md'>
-                {post.title}
+            <div className='text-white absolute bottom-9'>
+            <Link href={`/post/${post.slug}`} key={post.title} className='text-xs'>
+                {post.title}&nbsp;<kbd>-</kbd>&nbsp;{moment(post.createdAt).format('MMM DD, YYYY')}
               </Link>
-              <p className='text-white font-xs'>
-                {moment(post.createdAt).format('MMM DD, YYYY')}
-              </p>
+            </div>
             </div>
           </div>
         ))}
