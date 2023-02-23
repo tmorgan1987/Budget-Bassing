@@ -24,6 +24,7 @@ const PostWidget = ({categories, slug}) => {
         </h3> 
 
         {relatedPosts.map((post)=> (
+          <Link href={`/post/${post.slug}`} key={post.title} className='text-xs'>
           <div className='relative'>
           <div key={post.title} className=''>
             <div className=''>
@@ -35,13 +36,12 @@ const PostWidget = ({categories, slug}) => {
               src={post.featuredImage.url}
               />
             </div>
-            <div className='text-white absolute bottom-9'>
-            <Link href={`/post/${post.slug}`} key={post.title} className='text-xs'>
+            <div className='text-white absolute bottom-9 cursor-pointer hover:text-black'>
                 {post.title}&nbsp;<kbd>-</kbd>&nbsp;{moment(post.createdAt).format('MMM DD, YYYY')}
-              </Link>
             </div>
             </div>
           </div>
+          </Link>
         ))}
     </div>
   )
