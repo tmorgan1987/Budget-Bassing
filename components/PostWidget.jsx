@@ -19,7 +19,7 @@ const PostWidget = ({categories, slug}) => {
 
   
   return (
-    <div className="text-right justify-around shadow-none pb-80 mb-8">
+    <div className="text-center md:text-right justify-around shadow-none pb-80 mb-8">
         
         <h3 className='text-gray-400 text-xl mb-8 font-semibold border-b pb-4'>
           {slug ? 'Related' : 'Recent'}
@@ -32,9 +32,9 @@ const PostWidget = ({categories, slug}) => {
             <div className=''>
               <img
               alt={post.title}
-              height='500px'
-              width='300px'
-              className='pb-10'
+              height='300px'
+              width='400px'
+              className='pb-10 rounded'
               src={post.featuredImage.url}
               />
             </div>

@@ -12,9 +12,9 @@ const [categories, setCategories] = useState([]);
     }, []);
 
     return (
-        <div className = "container mx-auto px- mb-8">
+        <div className = "container mx-auto px- mb-4">
             <div className="border-b w-full inline-block border-white-800 py-8">
-                <div className="md:float-left block">
+                <div className="object-center float-left block">
                     <Link href='/'>
                         <span className='cursor-pointer'>
                             {/* <img src='BB-logos_white_1_80x80.png'></img> */}

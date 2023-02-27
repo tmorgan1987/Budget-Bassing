@@ -5,7 +5,7 @@ import Link from "next/link";
 const PostCard = ({ post }) => {
   if (post.featuredPost === true) {
     return (
-      <div className="relative overflow-hidden justify-around shadow-none pb-80 mb-6">
+      <div className="text-center md:text-left relative overflow-hidden shadow-none pb-80 mb-6">
         <h3 className='text-gray-400 text-xl mb-8 font-semibold border-b pb-4'>
           Featured
         </h3> 
