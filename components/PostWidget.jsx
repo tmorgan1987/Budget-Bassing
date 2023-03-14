@@ -34,11 +34,11 @@ const PostWidget = ({categories, slug}) => {
               alt={post.title}
               height='300px'
               width='400px'
-              className='pb-10 rounded'
+              className='pb-3 rounded'
               src={post.featuredImage.url}
               />
             </div>
-            <div className='text-white absolute bottom-9 cursor-pointer hover:text-black'>
+            <div className='text-white absolute bottom-4 cursor-pointer hover:text-black'>
                 {post.title}&nbsp;<kbd>-</kbd>&nbsp;{moment(post.createdAt).format('MMM DD, YYYY')}
             </div>
             </div>
